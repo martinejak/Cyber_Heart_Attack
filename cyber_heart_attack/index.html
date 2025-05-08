@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Cyber_Heart_Attack</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=VT323&display=swap" rel="stylesheet">
+
+  <!-- Draggable vinduer -->
+  <script src="js/drag-windows.js"></script>
+
+  <!-- Hvor spillet mainly kører – defer added så det loader efter DOM er klar -->
+  <script src="js/scenarios.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Narrator-vindue der leder spilleren igennem -->
+  <div id="narratorbox" class="window-style">
+    <div class="window-header">
+      <span>Cyber Chat</span>
+    </div>
+    <div class="window-content">
+      <h1 id="narrator">Velkommen til Cyber_<3_Attack!</h1>
+    </div>
+  </div>
+
+  <!-- Chat-beskeder fra daten -->
+  <div id="datebox" class="window-style hidden">
+    <div class="window-header">
+      <span>Messenger</span>
+    </div>
+    <h1 id="date"></h1>
+    </div>
+  </div>
+
+  <!-- Hovedspillets UI med valgmuligheder -->
+  <div id="game" class="window-style">
+    <div class="window-header">
+      <span>Cyber_<3_Attack!</span>
+    </div>
+    <div id="choices">
+      <!-- Startknap -->
+      <button class="choice-btn" onclick="startGame()">Start spillet</button>
+    </div>
+  </div>
+
+  <!-- Antivirus-installation -->
+  <div id="progressWindow" class="window-style hidden">
+    <div class="window-header">Installerer Antivirus...</div>
+    <div class="window-content">
+      <div id="progressContainer">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
